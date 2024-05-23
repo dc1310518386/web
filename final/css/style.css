@@ -1,0 +1,293 @@
+
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4,  ul, 
+li, a
+{margin: 0; padding: 0; border: 0; outline: none;}
+
+
+a {color: #000000;} 
+A:link {TEXT-DECORATION: none;}
+A:visited {TEXT-DECORATION: none;}
+
+ul,li{list-style-type:none;}
+.clearit{clear:both;}
+.ztop {top: 0px; height: 400px; position: sticky; z-index: 2;}
+.top {top: 0px;  position: sticky; z-index: 2;}
+.nav {width:100%; height:60px; background: rgba(0,0,0, 1);}
+.nav ul { width:1000px; margin:0 auto;}
+.nav ul  li { width:200px; float:left; text-align:center; line-height:60px;}
+.nav ul  li  a { color:#FFF;  font-size:18px;  width:200px; height:60px; display:block;}
+.xia { width:1000px; margin:0 auto; background: rgba(255,255,255, 0.7 ); padding:20px;  margin-top:-250px;}
+
+
+
+.title-a5 {width:180px; height:40px; background:#FFF; border-radius:15px; text-align:center; line-height:40px; }
+.title-a5 p { font-size:18px; font-weight:bold;}
+.title {width:150px; height:40px; background:#FFF; border-radius:15px; text-align:center; line-height:40px; }
+.title p { font-size:18px; font-weight:bold;}
+.zuo {width:550px; float:left; line-height:30px; margin-top:20px;}
+.zuo1 {width:450px; float:left; line-height:30px; margin-top:20px;}
+.you {width:430px; float:left; margin-left:20px;}
+.you p { margin-top:20px;}
+.zi { margin-top:20px;}
+.zi h3 { margin-bottom:10px;}
+.zi p { line-height:30px;}
+.tu img { margin-top:20px; margin-left:25px;}
+.foot {width:100%; height:70px; background: rgba(0,0,0, 0.7 ); text-align:center; line-height:70px;  color:#FFF;  font-size:18px; font-weight:bold}
+.zi table { border-collapse:collapse; margin-top:15px;}
+.zi td { border:1px solid #333; padding:6px;}
+
+
+/* 最外层的div区域，里面有一个轮播区域 */
+#homepage {
+	width:420px;
+	height:320px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 轮播区域 */
+.carousel {
+	/* 设置显示区域的宽度和高度 */
+	width:400px;
+	height:300px;
+	/* 隐藏溢出的内容 */
+	overflow:hidden; 
+	
+	/* 居中显示这个div区域 */
+	position:relative;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	
+	/*background-color:black;	 完成轮播时删除 */
+}
+
+/* 轮播内容的集合 */
+.carousel-set {
+	width:2000px;	/* 设置宽度为轮播内容宽度的总和 */
+	height:300px;	/* 轮播内容的高度 */
+	
+	/*background-color:blue;	 完成轮播时删除 */
+	
+	/* 提示：修改这个div的左侧外边距可以实现移动轮播内容 */
+	/* 应用动画 */
+	animation:playMovie 15s linear infinite;
+}
+
+/* 轮播的内容 */
+.carousel-content {
+	width:400px;
+	height:300px;
+	float:left;	/* 设置左浮动，让轮播内容排成一行 */
+}
+
+/* 轮播的内容中的<img>标签 */
+.carousel-content>img{
+	width:100%;
+	height:100%;
+	
+}
+
+.selected{
+	background-color: #ddd;
+	color: #333;
+	
+}
+
+
+
+
+
+/* keyframes规则 */
+@keyframes playMovie {
+	0% {margin-left:0px;}
+	10% {margin-left:0px;}
+	20% {margin-left:-400px;}
+	40% {margin-left:-400px;}
+	50% {margin-left:-800px;}
+	70% {margin-left:-800px;}
+	80% {margin-left:-1200px;}
+	90% {margin-left:-1200px;}
+	100% {margin-left:-1600px;}
+}
+
+
+
+
+
+
+hr.style-one {/*透明渐变水平线*/
+	width:80%;
+	margin:0 auto;
+	border: 0;
+	height: 4px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(65, 145, 31, 0.75), rgba(0, 0, 0, 0));
+ }
+
+
+
+ @media(max-width:1040px){
+	.xia{
+		width:auto;
+	}
+	.you{width: 100%;}
+	.zuo{width: 100%;}
+}
+
+
+
+
+body {
+	font-family: Arial, sans-serif;
+	
+	margin: 0;
+	padding: 0;
+	background-color: #B0E0E6;;
+}
+
+header {
+	background-color: #333;
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+}
+
+nav {
+	background-color: #555;
+	overflow: hidden;
+	display: flex;
+	justify-content: center; /* 居中 */
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #ddd;
+	color: #333;
+}
+
+.mh{
+	padding: 20px;
+	display: flex;
+	justify-content: center; /* 居中 */
+	align-items: center; /* 垂直居中 */
+	flex-wrap: wrap;
+	background-image: url(../img/bg.jpg); /* 替换成你的背景图片路径 */
+	background-size: cover;
+	background-position: center;
+	color: #fff; /* 文本颜色为白色，以便更好显示 */
+}
+
+.text-area {
+	flex: 1;
+	padding: 20px;
+}
+
+.image-area {
+	flex: 1;
+	padding: 20px;
+	text-align: center;
+}
+
+.placeholder-image {
+	background-color: #ddd; /* 色块代替图片的颜色 */
+	width: 400px; /* 100% 宽度 */
+	height: 300px; /* 设置高度，可以根据需要调整 */
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	width: 100%;
+}
+
+.contact-section {
+	background-color: #555;
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.contact-info,.social-icons {
+	flex: 1;
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+}
+
+
+
+.social-icon {
+	display: inline-block;
+	margin: 0 10px;
+	color: #fff;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.biodiversity-section {
+	background-color: #B0E0E6;
+	color: #333333;
+	padding: 40px;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.extinction-section {
+	background-color: #ADD8E6;
+	color: #333333;
+	padding: 40px;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.animal-category {
+	margin-top: 60px;
+	padding: 20px;
+	text-align: center;
+}
+
+.animal-category h2 {
+	width:150px; height:40px; background:#FFF; border-radius:15px; text-align:center; line-height:40px; 
+	color: #333;
+}
+
+.rei{
+	position: absolute;
+	left:50%;
+	margin:-50px -75px;
+}
+
+.animal-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 10px;
+}
+
+.animal {
+	width: 200px;
+	margin: 10px;
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.animal img {
+	max-width: 100%;
+	height: 85%;
+	border-radius: 4px;
+}
+
